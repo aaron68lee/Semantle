@@ -6,6 +6,8 @@ This computer program attempts to compare user performance with a machine that a
 
 ## User Guide
 
+Semantle.py attempts to help the user solve the daily semantle game by by providing the user with words semantically similar to their input guesses in order to get closer to the target word in similarity score.
+
 ### Install Dependencies
 
 A requirements.txt will be added later. To install all dependencies, run pip install -r requirements.txt.
@@ -13,8 +15,6 @@ A requirements.txt will be added later. To install all dependencies, run pip ins
 * pip install gensim
 * pip install transformers
 * pip install keyboard 
-
-<br>
 
 ### Run File
 
