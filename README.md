@@ -4,6 +4,27 @@ Semantle is a game about guessing a secret word per the following rules:
 
 This computer program attempts to compare user performance with a machine that auto-guesses the secret word using NLP techniques.
 
+## User Guide
+
+### Install Dependencies
+
+A requirements.txt will be added later. To install all dependencies, run pip install -r requirements.txt.
+
+* pip install gensim
+* pip install transformers
+* pip install keyboard 
+
+<br>
+
+### Run File
+
+Clone this github repo and run the main python file by typing python semantle.py in command prompt. <br>
+
+Arguments: <br>
+* --words: number of top similar words to print (defaults to 10)
+
+python3 semantle.py --words 10
+
 ## Rules
 
 As cited from [Semantle](https://semantle.com/)
