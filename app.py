@@ -8,9 +8,15 @@ import random
 import numpy as np
 import re
 from scipy.spatial import distance
-import keyboard
+#simport keyboard
 import argparse
+
 from flask import Flask, render_template, request
+
+'''
+from views import views
+
+'''
 
 app = Flask(__name__)
 
@@ -117,4 +123,4 @@ def predict():
     return render_template('result.html', output=output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8000)
