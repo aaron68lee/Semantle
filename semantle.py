@@ -94,6 +94,7 @@ def normalize(v):
     v_norm = v / np.linalg.norm(v)
     #v_norm = v_norm / np.linalg.norm(v_norm)
     return v_norm
+
 def get_orthogonal(model, word, flag, max_return=10):
     '''
     Return N words from vectors orthogonal to word vector by finding projections on hyperplane
