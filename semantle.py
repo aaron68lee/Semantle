@@ -154,18 +154,19 @@ def main():
     #################### LOAD MODEL  #################
     # Load Google News Word2Vec Model
 
+    '''
     model_path = './Word2Vec_Models/google_word2vec.pkl'
 
     # Load the Word2Vec model from the pickle file
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
         print('Model loaded')
-
     '''
+    
     model_path = './Word2Vec_Models/GoogleNews-vectors-negative300.bin'
     model = KeyedVectors.load_word2vec_format(model_path, limit=500000, binary=True)
     model.init_sims(replace=True) #Precompute L2-normalized vectors. If replace is set to TRUE, forget the original vectors and only keep the normalized ones. Saves lots of memory, but can't continue to train the model.
-    '''
+    
     
     # Filter out vectors not in the vocab list
     vocab = [word for word in model.index_to_key if re.match("^[a-zA-Z.-]+$", word)]
