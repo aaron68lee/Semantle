@@ -44,8 +44,8 @@ Every word in a Word2Vec model is a 300-dimensional vector embedding. By iterati
 Interpolation <br>
 
 * Given a list of vectors, V, and respective similarity scores as weights, W, the resultant averaged vector v' is approximated as follows:
-$v' = \[\sum_{i=1}^{n} v_i * w_i \]$
+$v' = \sum_{i=1}^{n} v_i * w_i $
 
 Orthogonality <br>
 
-* Given a word, a list of orthogonal word vectors contained in the plane normal to the given word is found according to the principle: ```C * V = 0```, where C is the coefficient matrix for the hyperplane in standard form, multiplied with the components of V via dot product.
+* Given a word, a list of orthogonal word vectors contained in the plane normal to the given word is found according to the principle: $C * V = 0$, where C is the coefficient matrix for the hyperplane in standard form, multiplied with the components of V via dot product.
