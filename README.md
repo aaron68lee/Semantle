@@ -1,8 +1,6 @@
 # Semantle
 
-Semantle is a game about guessing a secret word per the following rules:
-
-This computer program attempts to compare user performance with a machine that auto-guesses the secret word using NLP techniques.
+Semantle is a game about guessing a secret target word. Games rules are described below. This program assists in solving the daily Semantle challenge. See a similar program I wrote for [Wordle](https://github.com/aaron68lee/Wordle-Solver).
 
 ## User Guide
 
