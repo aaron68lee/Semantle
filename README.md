@@ -39,18 +39,13 @@ Each guess must be a word. Semantle will tell you how semantically similar it th
 
 ## Techniques and Implementations
 
-Every word in a Word2Vec model is a 700-dimensional vector embedding. By iteratively guessing words that are orthogonal to previous guesses in this hyperdimensional vector space, we maximize information gain with respect to the cosine similarity metric as a measure of word 'distance'. Recall that the cosine similarity between two vectors is defined as the cosine of the angle between them equal to the quotient of the their dot products and the product of their magnitudes. Based on the similarity score between the guess and target word, we can the guess at each timestep by finding a projection of the previous guess vector along a similar axis while exploring along a different dimension to maximize information gain until our guess is within a similarity delta of the target word. This is based on the principle and assumption that orthogonal word vectors have zero cosine similarity and are therefore semantically dissimilar, but contain semantic relevance along different concept dimensions. The most similar words to a given word are approximated using ANN and minimizing vector distance.
+Every word in a Word2Vec model is a 300-dimensional vector embedding. By iteratively guessing words that are orthogonal to previous guesses in this hyperdimensional vector space, we maximize information gain with respect to the cosine similarity metric as a measure of word 'distance'. Recall that the cosine similarity between two vectors is defined as the cosine of the angle between them equal to the quotient of the their dot products and the product of their magnitudes. Based on the similarity score between the guess and target word, we can the guess at each timestep by finding a projection of the previous guess vector along a similar axis while exploring along a different dimension to maximize information gain until our guess is within a similarity delta of the target word. This is based on the principle and assumption that orthogonal word vectors have zero cosine similarity and are therefore semantically dissimilar, but contain semantic relevance along different concept dimensions. The most similar words to a given word are approximated using ANN and minimizing vector distance.
 
 Interpolation <br>
 
 * Given a list of vectors, V, and respective similarity scores as weights, W, the resultant averaged vector v' is approximated as follows:
-$$
-v' = 
-\[
-\sum_{i=1}^{n} v_i * w_i
-\]
-$$
+$v' = \[\sum_{i=1}^{n} v_i * w_i \]$
 
 Orthogonality <br>
 
-* Given a word, a list of orthogonal word vectors contained in the plane normal to the given word is found according to the principle: C * V = 0, where C is the coefficient matrix for the hyperplane in standard form, multiplied with the components of V via dot product.
+* Given a word, a list of orthogonal word vectors contained in the plane normal to the given word is found according to the principle: ```C * V = 0```, where C is the coefficient matrix for the hyperplane in standard form, multiplied with the components of V via dot product.
