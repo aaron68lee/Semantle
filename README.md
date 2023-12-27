@@ -28,6 +28,8 @@ Options:
 * 'o1': Given a word, return words orthogonal to given word vector and therefore, most dissimilar.
 * 'o2': Same as 'o1' option, with slower compute time and higher variance among output words. 
 
+![Program UI](./Gallery/semantle.png)
+
 <hr>
 
 ## Rules
